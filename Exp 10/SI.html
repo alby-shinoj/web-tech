@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function add() {
+        var a = parseInt(document.getElementById("tb1").value);
+        var b = parseInt(document.getElementById("tb2").value);
+        var res = a + b;
+        document.getElementById("view").innerHTML = a + " + " + b + " = " + res;
+      }
+
+      function sub() {
+        var a = parseInt(document.getElementById("tb1").value);
+        var b = parseInt(document.getElementById("tb2").value);
+        var res = a - b;
+        document.getElementById("view").innerHTML = res;
+      }
+
+      function mul() {
+        var a = parseInt(document.getElementById("tb1").value);
+        var b = parseInt(document.getElementById("tb2").value);
+        var res = a * b;
+        document.getElementById("view").innerHTML = res;
+      }
+
+      function div() {
+        var a = parseInt(document.getElementById("tb1").value);
+        var b = parseInt(document.getElementById("tb2").value);
+        var res = a / b;
+        document.getElementById("view").innerHTML = res;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+
+    Value 1:<input type="text" id="tb1" />
+
+    Value 2:<input type="text" id="tb2" />
+
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onclick="sub()">Subtract</button>
+    <button type="button" onclick="mul()">Multiply</button>
+    <button type="button" onclick="div()">Division</button>
+    <br />
+    <span id="view"></span>
+  </body>
+</html>

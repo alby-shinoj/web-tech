@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+    <script>
+      var app = angular.module("app", []);
+      app.controller("control", function ($scope) {
+        $scope.add = function () {
+          $scope.view = parseInt($scope.tb1) + parseInt($scope.tb2);
+        };
+
+        $scope.sub = function () {
+          $scope.view = parseInt($scope.tb1) - parseInt($scope.tb2);
+        };
+
+        $scope.mul = function () {
+          $scope.view = parseInt($scope.tb1) * parseInt($scope.tb2);
+        };
+
+        $scope.div = function () {
+          $scope.view = parseInt($scope.tb1) / parseInt($scope.tb2);
+        };
+      });
+    </script>
+  </head>
+  <body ng-app="app" , ng-controller="control">
+    <h1>Simple Calculator</h1>
+
+    Value 1:<input type="text" ng-model="tb1" />
+
+    Value 2:<input type="text" ng-model="tb2" />
+
+    <button type="button" ng-click="add()">Add</button>
+    <button type="button" ng-click="sub()">Subtract</button>
+    <button type="button" ng-click="mul()">Multiply</button>
+    <button type="button" ng-click="div()">Division</button>
+    <br />
+
+    <span ng-bind="view"></span>
+  </body>
+</html>

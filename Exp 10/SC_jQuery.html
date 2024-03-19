@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          var a = parseInt($("#tb1").val());
+          var b = parseInt($("#tb2").val());
+          var res = a + b;
+
+          $("#view").text(res);
+        });
+
+        $("#btn2").click(function () {
+          var a = parseInt($("#tb1").val());
+          var b = parseInt($("#tb2").val());
+          var res = a - b;
+
+          $("#view").text(res);
+        });
+
+        $("#btn3").click(function () {
+          var a = parseInt($("#tb1").val());
+          var b = parseInt($("#tb2").val());
+          var res = a * b;
+
+          $("#view").text(res);
+        });
+
+        $("#btn4").click(function () {
+          var a = parseInt($("#tb1").val());
+          var b = parseInt($("#tb2").val());
+          var res = a / b;
+
+          $("#view").text(res);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+
+    Value 1:<input type="text" id="tb1" />
+
+    Value 2:<input type="text" id="tb2" />
+
+    <button type="button" id="btn1">Add</button>
+    <button type="button" id="btn2">Subtract</button>
+    <button type="button" id="btn3">Multiply</button>
+    <button type="button" id="btn4">Division</button>
+    <br />
+    <span id="view"></span>
+  </body>
+</html>

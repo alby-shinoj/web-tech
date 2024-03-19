@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+  </head>
+
+  <body>
+    <h1>User Registration form</h1>
+
+    <form action="/signup" method="post">
+      Name: <input type="text" name="name" required /><br /><br />
+
+      Password: <input type="password" name="password" required /><br /><br />
+
+      Age: <input type="number" name="age" required /><br /><br />
+
+      Email: <input type="text" name="email" required /><br /><br />
+
+      Phone: <input type="number" name="phone" required /><br /><br />
+
+      Gender: <input type="radio" name="gender" value="male" />male
+      <input type="radio" name="gender" value="female" />female 
+      
+      State: <select name="state">
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Andhra pradesh">Andhra pradesh</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

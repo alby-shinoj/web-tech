@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="home" content="AISPARK" />
+    <title>Aispark</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body style="font-family: 'Courier New', Courier, monospace">
+    <table width="1262px">
+      <thead height="80px">
+        <tr style="background-color: rgb(63, 62, 62)">
+          <th align="center" style="color: white" colspan="2">
+            <h1 style="font-size: xx-large">Aispark</h1>
+          </th>
+        </tr>
+
+        <tr height="40px">
+          <td style="background-color: green; color: white" colspan="2">
+            <a href="application.html" style="color: white">Application Form</a>
+            /
+            <a href="/view" style="color: white">View List</a>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center" colspan="2">
+            <br />
+            <fieldset>
+              <legend style="text-align: center">User Registration Form</legend>
+              <form action="/save" method="post" autocomplete="on">
+                <table>
+                  <tr>
+                    <td><label>Name:</label></td>
+                    <td>
+                      <input
+                        type="text"
+                        name="name"
+                        id=""
+                        required
+                        autofocus
+                        placeholder="Enter your name"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Password:</label></td>
+                    <td>
+                      <input
+                        type="password"
+                        name="password"
+                        id=""
+                        minlength="8"
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Age:</label></td>
+                    <td><input type="text" name="age" id="" required /></td>
+                  </tr>
+                  <tr>
+                    <td><label>Mobile No:</label></td>
+                    <td>
+                      <input
+                        type="text"
+                        name="phone"
+                        id=""
+                        required
+                        placeholder="85589072257"
+                        pattern="[0-9]{10}"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Email:</label></td>
+                    <td>
+                      <input
+                        type="text"
+                        name="email"
+                        id=""
+                        required
+                        placeholder="sample@gmail.com"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="male"
+                        required
+                        checked
+                      />Male
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="female"
+                        required
+                      />Female
+                    </td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <td><label>State:</label></td>
+                    <td>
+                      <select name="state" id="" required>
+                        <option value="Tamilnadu" selected>Tamil Nadu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Karnataka">Karnataka</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center">
+                      <br /><br />
+                      <button type="">Submit</button>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </fieldset>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
