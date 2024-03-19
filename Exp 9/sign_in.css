@@ -1,0 +1,58 @@
+.main{
+    width: 100%;
+    margin-top: 50px;
+    height: 550px;
+    overflow: clip;
+    background: url("../img/bg.jpg") no-repeat fixed center;
+    background-size: cover;
+    position: fixed;
+    top: 110px;
+}
+
+.box1{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: larger;
+    top: 80px;
+    left: 450px;
+
+    border-radius: 25px;
+    background: white;
+    padding: 20px;
+
+    box-shadow: 20px 20px 100px grey, -20px -20px 100px grey;
+}
+
+.box1 h4{
+    text-align: center;
+}
+
+.box2{
+    width: 360px;
+    height: auto;
+    position: relative;
+    top: 40px;
+    padding: 10px;
+}
+
+.box2 input{
+    width: 340px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 2px gray;
+
+    border-radius: 10px;
+    padding: 20px;
+
+    border: 1px;
+}
+
+.box2 img{
+    object-fit: contain;
+    width: 150px;
+    position: absolute;
+    left: 105px;
+}
+

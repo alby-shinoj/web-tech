@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="home" content="AISPARK" />
+    <link rel="icon" type="image/png" href="3293942.png" />
+    <title>Aispark</title>
+    <style></style>
+  </head>
+  <body style="font-family: 'Courier New', Courier, monospace">
+    <table width="1262px">
+      <thead height="80px">
+        <tr style="background-color: rgb(63, 62, 62)">
+          <th align="center" style="color: white" colspan="2">
+            <h1 style="font-size: xx-large">
+              <img src="3293942.png" alt="logo" height="30px" width="30px" />
+              Aispark
+            </h1>
+          </th>
+        </tr>
+
+        <tr height="40px">
+          <td style="background-color: green; color: white" colspan="2">
+            <a href="home.html" style="color: white">Media Elements</a> /
+            <a href="application.html" style="color: white">Application Form</a>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center" colspan="2">
+            <br />
+            <fieldset>
+              <legend style="text-align: center">Application Form</legend>
+              <form action="submit.php" method="post" autocomplete="on">
+                <table>
+                  <tr>
+                    <td><label>Name:</label></td>
+                    <td><input type="text" name="" id="" required autofocus placeholder="Enter your name" /></td>
+                  </tr>
+                  <tr>
+                    <td><label>Application No:</label></td>
+                    <td><input type="text" name="" id="" required placeholder="KU20201CS1010" pattern="[A-Z]{4}" /></td>
+                  </tr>
+                  <tr>
+                    <td><label>Password:</label></td>
+                    <td><input type="password" name="" id="" minlength="8" required /></td>
+                  </tr>
+                  <tr>
+                    <td><label>Date of Birth:</label></td>
+                    <td><input type="date" name="" id="" required/></td>
+                  </tr>
+                  <tr>
+                    <td><label>Age:</label></td>
+                    <td><input type="text" name="" id="" required/></td>
+                  </tr>
+                  <tr>
+                    <td><label>Mobile No:</label></td>
+                    <td><input type="text" name="" id="" required placeholder="85589072257" pattern="[0-9]{10}"/></td>
+                  </tr>
+                  <tr>
+                    <td><label>Email:</label></td>
+                    <td><input type="text" name="" id="" required placeholder="sample@gmail.com"/></td>
+                  </tr>
+                  <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                      <input type="radio" name="gender" required checked/>Male
+                      <input type="radio" name="gender" required/>Female
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Address:</label></td>
+                    <td>
+                      <textarea name="" id="" cols="30" rows="10" required></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Languages Known:</label></td>
+                    <td>
+                      <input type="checkbox" name="lang"/>English
+                      <input type="checkbox" name="lang" />Tamil
+                      <input type="checkbox" name="lang" />Malayalam
+                      <input type="checkbox" name="lang" />Telugu
+                      <input type="checkbox" name="lang" />Hindi
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Select Your Course:</label></td>
+                    <td>
+                      <select name="course" id="" required>
+                        <option value="CSE" selected>B. Tech CSE</option>
+                        <option value="CS">B. Tech CS</option>
+                        <option value="Com">B. Com</option>
+                        <option value="A&S">Arts and Sciences</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Upload Your Photo:</label></td>
+                    <td>
+                      <input type="file" accept="image/png, image/jpg" required/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <label for="file">Uploading</label>
+                      <progress id="file" max="100" value="70">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <br><br>
+                        <button type="">Submit</button>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </fieldset>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

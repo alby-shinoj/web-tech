@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.main1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin: 2px;
+    background-image: linear-gradient(to right, black, white);   
+}
+
+img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    background-color: black;
+    top: 0;
+}
+
+.col1{
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.col2{
+    display: flex;
+    flex-direction: row;
+}
+
+.col3{
+    flex: 1 1 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col3 a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col3 a:hover{
+    background-image: linear-gradient(#004b77 50px, white);
+}
+
+.user{
+    flex: 1 0 100px;
+    display: flex;
+    align-items: center; 
+}
+
+.user-icon{
+    flex: 0 0 70px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.user h4{
+    color: white;
+}
+
+.col3 a:active{
+    background-color: white;
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="logo/3293942.png" />
+    <title>Aispark</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        background-color: rgb(63, 62, 62);
+        color: white;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        font-family: "Tektur", cursive;
+      }
+
+      .footer {
+        background-color: green;
+        width: 100%;
+        height: auto;
+        padding: 1px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .row {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .navbar {
+        background-color: green;
+        width: 100%;
+        height: auto;
+        padding: 1px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      ul li {
+        display: inline-block;
+      }
+
+      ul li a:hover,
+      div a:hover {
+        color: lightskyblue;
+      }
+
+      ul li a,
+      div a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .box1 {
+        flex: 50%;
+        text-align: center;
+      }
+
+      .col1 {
+        flex: 33.3%;
+        height: 200px;
+        overflow: clip;
+      }
+
+      .col1:hover .image {
+        opacity: 0.3;
+      }
+
+      .col1:hover .textbox {
+        opacity: 1;
+      }
+
+      .textbox {
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transition: 0.5s ease;
+        text-align: center;
+        background-color: gray;
+        color: white;
+      }
+
+      .image {
+        opacity: 1;
+        transition: 0.5s ease;
+      }
+
+      .col2 {
+        flex: 50%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      p {
+        padding: 5px;
+        text-align: justify;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div style="flex: 50%">
+        <h1 style="font-size: xx-large">
+          <img src="logo/3293942.png" alt="logo" height="30px" width="30px" />
+          aispark
+        </h1>
+      </div>
+      <div
+        style="
+          flex: 50%;
+          text-align: end;
+          font-family: 'Courier New', Courier, monospace;
+        "
+      >
+        <img
+          src="icons/icons8-user-64.png"
+          height="40px"
+          style="padding-bottom: 0%"
+        />
+        <p style="padding-top: 0px">nikhil</p>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li>
+            <a href="home.html">Home</a>
+          </li>
+          <li>&nbsp; &#47; &nbsp;</li>
+          <li>
+            <a href="application.html">Application Form</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="row">
+      <img src="img/AI.jpg" alt="" style="object-fit: cover; width: 100%" />
+    </div>
+
+    <div
+      class="row"
+      style="
+        display: flex;
+        flex-direction: column;
+        background-color: palegoldenrod;
+        font-family: 'Courier New', Courier, monospace;
+      "
+    >
+      <h3 style="text-align: center; font-style: oblique; font-weight: bolder">
+        About Us
+      </h3>
+      <p>
+        Welcome to Aispark - Pioneering AI Solutions for Tomorrow! We are an
+        innovative AI company on a mission to revolutionize industries and
+        empower individuals with cutting-edge AI applications. Our vision is to
+        create a future where AI seamlessly integrates into every aspect of
+        human life, enhancing efficiency, improving decision-making, and
+        unlocking unprecedented opportunities for growth and development. At the
+        heart of our success lies our extraordinary team of AI experts, data
+        scientists, and engineers, united by a shared passion for advancing the
+        frontiers of artificial intelligence.
+      </p>
+      <p>
+        Driven by the commitment to continuous innovation, our team harnesses
+        the latest advancements in AI research and technology. We develop
+        state-of-the-art algorithms and machine learning models that power our
+        comprehensive suite of AI solutions. From intelligent automation and
+        predictive analytics to natural language processing and computer vision,
+        our applications cater to the unique needs of businesses and
+        organizations worldwide. Through open communication and collaboration,
+        we partner with our clients to understand their specific requirements
+        and challenges, ensuring that our AI solutions are tailor-made to meet
+        their individual needs.
+      </p>
+      <p>
+        At Aispark, we take our responsibility as AI creators seriously,
+        upholding the highest ethical standards in AI development and
+        deployment. Transparency, fairness, and privacy are at the core of all
+        our AI endeavors, putting the well-being and interests of individuals
+        and communities at the forefront. We invite you to join us on this
+        exciting AI journey, where possibilities are limitless, and together, we
+        can shape a future enriched by the transformative power of AI. Welcome
+        to Aispark - Where AI Ignites Infinite Possibilities!
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col1">
+        <div class="textbox">
+          <a href="img/teeam.jpg">Meet Our Team</a>
+        </div>
+        <img
+          class="image"
+          src="img/teeam.jpg"
+          alt=""
+          style="object-fit: cover; width: 100%"
+        />
+      </div>
+
+      <div class="col1">
+        <div class="textbox">
+          <a href="img/services.jpg">Services Provided</a>
+        </div>
+        <img
+          class="image"
+          src="img/services.jpg"
+          alt=""
+          style="object-fit: cover; width: 100%"
+        />
+      </div>
+
+      <div class="col1">
+        <div class="textbox">
+          <a href="img/works.jpg">Our Works</a>
+        </div>
+        <img
+          class="image"
+          src="img/works.jpg"
+          alt=""
+          style="object-fit: cover; width: 100%"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col2" style="background-color: palegoldenrod">
+        <h3 align="center">Our Vision</h3>
+        <p>
+          We envision a future where AI seamlessly integrates into every aspect
+          of human life, enhancing efficiency, improving decision-making, and
+          unlocking unprecedented opportunities for growth and development. At
+          Aispark, we strive to be at the forefront of this transformative
+          journey, pioneering groundbreaking AI applications that shape a
+          brighter and more prosperous world.
+        </p>
+      </div>
+      <div class="col2">
+        <img src="img/vision.jpg" alt="" width="100%" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col2">
+        <img src="img/tech.jpg" alt="" width="100%" />
+      </div>
+
+      <div class="col2" style="background-color: palegoldenrod">
+        <h3 align="center">Our Technology</h3>
+        <p>
+          Harnessing the latest advancements in AI research and technology, we
+          develop state-of-the-art algorithms, neural networks, and machine
+          learning models that drive our AI applications. We believe in
+          continuous innovation and regularly update our technology stack to
+          ensure that our clients receive the most powerful, secure, and
+          reliable AI solutions available.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <nav style="width: 100%">
+        <ul style="width: 100%; display: flex; flex-direction: row">
+          <li style="flex: 33.3%; text-align: center">
+            <a href="home.html">Home</a>
+          </li>
+          <li style="flex: 33.3%; text-align: center">
+            <a href="application.html">Application Form</a>
+          </li>
+          <li style="flex: 33.3%; text-align: center">
+            <a href="about_us.html">About Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="activision-logo.png" />
+    <title>Activision</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        font-family: "Tektur", cursive;
+        background-image: url(call_of_duty.jpg), 20%;
+      }
+
+      .row {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .navbar {
+        background-color: black;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .col1 {
+        flex: 33.3%;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+      }
+
+      div > a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .col1:hover {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="activision-logo.png"
+        alt=""
+        style="object-fit: cover; position: absolute; top: 0px; left: 20px"
+        height="150px"
+      />
+    </div>
+    <div class="navbar">
+      <div class="col1">
+        <a href="about_us.html"> About Us</a>
+      </div>
+      <div class="col1">
+        <a href="application.html">Jobs</a>
+      </div>
+      <div class="col1">
+        <a href="sign_in.html">Sign In</a>
+      </div>
+    </div>
+    <div class="page-container"></div>
+    <div class="footer"></div>
+  </body>
+</html>

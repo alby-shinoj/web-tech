@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="persona.css" />
+    <link rel="stylesheet" href="sign_in.css" />
+
+    <script>
+      var app = angular.module("app", ["ngRoute"]);
+      app.config(function ($routeProvider) {
+        $routeProvider
+          .when("/person", {
+            templateUrl: "Exp1.html",
+          })
+          .when("/login", {
+            templateUrl: "sign_in.html",
+            css: "sign_in.css",
+          })
+          .when("/sign", {
+            templateUrl: "sign_up.html",
+            css: "sign_in.css",
+          })
+          .otherwise("/person", {
+            templateUrl: "Exp1.html",
+          });
+      });
+    </script>
+  </head>
+
+  <body ng-app="app">
+    <div class="main1">
+      <div class="logo">
+        <img src="../logo/logo.png" alt="" />
+      </div>
+
+      <div class="header">
+        <div class="col1">
+          <div class="col2" style="flex: 0 0 450px">
+            <div class="col3">
+              <a href="#!person"><h4>Home</h4></a>
+            </div>
+
+            <div class="col3">
+              <a href="#!login"><h4>Login</h4></a>
+            </div>
+
+            <div class="col3">
+              <a href="#!sign"><h4>Sign Up</h4></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div ng-view></div>
+    </div>
+  </body>
+</html>

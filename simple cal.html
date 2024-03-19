@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <form action="">
+        <h4>Value 1</h4>
+        <input type="text" value="0" id="t1" />
+
+        <h4>Value 2</h4>
+        <input type="text" value="0" id="t2" />
+
+        <br />
+        <button type="button" onclick="sum()">+</button>
+        <button type="button" onclick="sub()">-</button>
+        <button type="button" onclick="mul()">x</button>
+        <button type="button" onclick="div()">/</button>
+
+        <h4>Answer</h4>
+        <h3 id="res"></h3>
+      </form>
+    </fieldset>
+
+    <script>
+      let a = 0,
+        b = 0;
+
+      function sum() {
+        a = document.getElementById("t1").value;
+        b = document.getElementById("t2").value;
+        document.getElementById("res").innerHTML = a + b;
+      }
+
+      function sub() {
+        a = document.getElementById("t1").value;
+        b = document.getElementById("t2").value;
+        document.getElementById("res").innerHTML = a - b;
+      }
+
+      function mul() {
+        a = document.getElementById("t1").value;
+        b = document.getElementById("t2").value;
+        document.getElementById("res").innerHTML = a * b;
+      }
+
+      function div() {
+        a = document.getElementById("t1").value;
+        b = document.getElementById("t2").value;
+        document.getElementById("res").innerHTML = a / b;
+      }
+    </script>
+  </body>
+</html>

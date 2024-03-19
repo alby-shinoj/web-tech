@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app = angular.module("app", []);
+      app.controller("control", function ($scope) {
+        $scope.items = [];
+        $scope.add = function () {
+          $scope.items.push({ name: $scope.item, price: $scope.price });
+          $scope.item = "";
+          $scope.price = "";
+        };
+
+        $scope.remove = function (index) {
+          $scope.items.splice(index, 1);
+        };
+      });
+    </script>
+  </head>
+  <body ng-app="app" ng-controller="control">
+    <h1>Product Inventory System</h1>
+
+    <input type="text" placeholder="Item" ng-model="item" />
+    <input type="text" placeholder="Price" ng-model="price" />
+    <button ng-click="add()">Add</button>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Remove</th>
+      </tr>
+      <tr ng-repeat="i in items">
+        <td>{{i.name}}</td>
+        <td>{{i.price}}</td>
+        <td ng-click="remove($index)" style="color: red">[Remove]</td>
+      </tr>
+    </table>
+  </body>
+</html>

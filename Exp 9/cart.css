@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin: 2px;
+    background-image: linear-gradient(to right, black, white);   
+}
+
+img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.inv{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    border: 2px solid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 222, 222);
+
+}
+
+.entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+input{
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 50px rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+button{
+    height: 50px;
+    width: 75px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+table{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+th{
+    background-color: rgb(0, 179, 0);
+}
+
+tr{
+    border: solid;
+    width: 100%;
+}
+
+td{
+    background-color: aliceblue;
+    padding: 2px;
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}

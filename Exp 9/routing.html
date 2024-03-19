@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script>
+      var app = angular.module("app", ["ngRoute"]);
+      app.config(function ($routeProvider) {
+        $routeProvider
+          .when("/filter", {
+            templateUrl: "filter.html",
+          })
+          .when("/form", {
+            templateUrl: "form.html",
+          });
+      });
+
+      app.controller("control1", function ($scope) {
+        $scope.data = new Date();
+      });
+
+      app.controller("control2", function ($scope) {});
+    </script>
+  </head>
+
+  <body ng-app="app">
+    <div>
+      <a href="#!filter">Filters</a>
+
+      <a href="#!form">Form</a>
+    </div>
+
+    <div ng-view></div>
+  </body>
+</html>
