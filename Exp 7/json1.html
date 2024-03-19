@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSON to Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var data = [
+          { name: "John", regno: 101, cgpa: 7.4 },
+          { name: "Vijay", regno: 102, cgpa: 6.4 },
+          { name: "Grace", regno: 103, cgpa: 9.4 },
+        ];
+
+        var jsonstring = JSON.stringify(data);
+        var obj = JSON.parse(jsonstring);
+        var view =
+          "<table border=1><tr><th>Name</th><th>Reg No</th><th>CGPA</th></tr>";
+
+        for (let i in obj) {
+          view += "<tr>";
+          view += "<td>" + obj[i].name + "</td>";
+          view += "<td>" + obj[i].regno + "</td>";
+          view += "<td>" + obj[i].cgpa + "</td>";
+          view += "</tr>";
+        }
+        view += "</table>";
+        $("#d1").html(view);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="d1"></div>
+  </body>
+</html>

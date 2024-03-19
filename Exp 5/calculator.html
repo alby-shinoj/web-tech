@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="logo/3293942.png" />
+    <title>Aispark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Tektur:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/calculator.css" rel="stylesheet" />
+
+    <script>
+        function read_a(){
+            var a = document.getElementById("t1").value();
+            return a;
+        }
+        function read_b(){
+            var b = dicument.getElementById('t2').value();
+            return b;
+        }
+
+        function add(a, b){
+            a = read_a();
+            b = read_b();
+            document.getElementById('result').innerHTML = a+b;
+        }
+    </script>
+  </head>
+
+  <body>
+    
+    <div class="main">
+      <div class="box1">
+        <h4>Simple Calculator</h4>
+        <form action="">
+          <div class="box2">
+            <input type="text" id="t1"/>
+          </div>
+          <div class="box2">
+            <input type="text" id="t2"/>
+          </div>
+
+          <div class="box4">
+            <button type="button" onclick="add()">Add</button>
+          </div>
+          <div class="box4">
+            <button type="button" onclick="">Subtract</button>
+          </div>
+          <div class="box4">
+            <button type="button" onclick="">Multiply</button>
+          </div>
+          <div class="box4">
+            <button type="button" onclick="">Divide</button>
+          </div>
+
+          <div class="box3">
+            <div class="">
+            <input type="text" id="result"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

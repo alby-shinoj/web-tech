@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #009F4D;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    font-size: larger;
+    position: fixed;
+    opacity: 1;
+    background-color: white;
+}
+
+#d1{
+    width: 30%;
+}
+
+#d2{
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+
+#i1{
+    float: left;
+    height: 100px;
+    position: relative;
+    left: 10px;
+}
+
+#i2{
+    float: right;
+    height: 70px;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+}
+
+#i3{
+    position: absolute;
+    height: 50px;
+    right: 130px;
+    top: 20px;
+}
+
+.navbar{
+    float: left;
+    height: 100px;
+}
+
+.login > h4{
+    position: absolute;
+    top: 30px;
+    right: 70px;
+}
+
+.login{
+    float: right;
+}
+
+.navbar > ul{
+    list-style-type: none;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar > ul li{
+    display: block;
+    float: left;
+    height: 100px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    height: 100px;
+    padding: 15px;
+}
+
+li a:hover{
+    background-color: rgb(0, 159, 77);
+    color: white;
+}
+
+#l1{
+    position: relative;
+    left: 340px;
+    top: 30px;
+}
+
+#l2{
+    position: relative;
+    left: 340px;
+    top: 30px;
+}
+
+#l3{
+    position: relative;
+    left: 340px;
+    top: 30px;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    background: url() no-repeat fixed center;
+    background-size: cover;
+    position: fixed;
+    top: 110px;
+}
+
+.box1{
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: larger;
+    top: 80px;
+    left: 300px;
+
+    border-radius: 25px;
+    background: white;
+    padding: 20px;
+
+    box-shadow: 20px 20px 100px grey, -20px -20px 100px grey;
+}
+
+.box1 h4{
+    text-align: center;
+}
+
+.box2{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    top: -20px;
+}
+
+.box2 input{
+    width: 310px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 2px gray;
+
+    border-radius: 10px;
+    padding: 20px;
+
+    border: 1px;
+}
+
+.box3{
+    width: 700px;
+    height: auto;
+    position: relative;
+    top: 30px;
+    padding: 10px;
+    left: 480px;
+}
+
+.box4{
+    width: 240px;
+    height: 240px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    left: 300px;
+    top: 50px;
+}
+
+.box4 button{
+    color: white;
+    width: 200px;
+    padding: 0;
+    height: 200px;
+    background-color: #009F4D;
+    overflow: hidden;
+}
+
+button img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.box4 h4{
+    text-align: center;
+    color: white;
+}
+
+.box5{
+    width: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.box5 h4{
+    position: relative;
+    top: 5px;
+    float: left;
+    color: white;
+    
+}
+.box5 input{
+    width: 60%;
+    height: 40px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 2px gray;
+
+    border-radius: 10px;
+    padding: 20px;
+
+    border: 1px;
+
+    float: right;
+}
+
+#sub{
+    position: relative;
+    top: 50px;
+    left: 600px;
+    background-color: #009F4D;
+    border-color: #009F4D;
+    color: white;
+    border-radius: 10px;
+}
+
+#cost{
+    position: relative;
+    top: 80px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+}
+
+#i4{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    opacity: 0.9;
+    z-index: -1;
+}

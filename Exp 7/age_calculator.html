@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="age_calculator.css" />
+    <title>Age Calculator</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var dob = new Date($("#t1").val());
+
+          const d = new Date();
+
+          var days = parseInt(
+            (d.getTime() - dob.getTime()) / (1000 * 3600 * 24)
+          );
+          var age_year = parseInt(days / 365);
+          var age_month = parseInt((days - 365 * age_year) / 30);
+          var age_days = days - 365 * age_year - 30 * age_month;
+
+          $("#h").text(
+            age_year + "years\t" + age_month + "month\t" + age_days + "days\t"
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="row">
+        <h1>Age Calculator</h1>
+      </div>
+
+      <div class="row">
+        <h4>Date of Birth</h4>
+        <input type="date" id="t1" />
+        <button>Submit</button>
+      </div>
+
+      <div class="row">
+        <h4 id="h"></h4>
+      </div>
+    </div>
+  </body>
+</html>

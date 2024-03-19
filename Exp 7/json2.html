@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSON search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var data = [
+          { name: "John", regno: 101, cgpa: 7.4 },
+          { name: "Vijay", regno: 102, cgpa: 6.4 },
+          { name: "Grace", regno: 103, cgpa: 9.4 },
+        ];
+
+        var jsonstring = JSON.stringify(data);
+        var obj = JSON.parse(jsonstring);
+        var view =
+          "<table border=1><tr><th>Name</th><th>Reg No</th><th>CGPA</th></tr>";
+
+        for (let i in obj) {
+          view += "<tr>";
+          view += "<td>" + obj[i].name + "</td>";
+          view += "<td>" + obj[i].regno + "</td>";
+          view += "<td>" + obj[i].cgpa + "</td>";
+          view += "</tr>";
+        }
+        view += "</table>";
+        $("#d1").html(view);
+
+        $("#tb1").keyup(function () {
+          var out = "";
+          var flag = false;
+          var s = $("#tb1").val();
+          for (let i in obj) {
+            if (obj[i].regno == s) {
+              flag = true;
+              out =
+                "Name: " +
+                obj[i].name +
+                "<br>Reg No: " +
+                obj[i].regno +
+                "<br>CGPA: " +
+                obj[i].cgpa;
+              break;
+            }
+          }
+          if (flag == true) $("#d2").html(out);
+          else $("#d2").html("Not Found.");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="d1"></div>
+    <form action="">
+      <label>Search Register No</label>
+      <input type="text" id="tb1" />
+    </form>
+    <div id="d2"></div>
+  </body>
+</html>

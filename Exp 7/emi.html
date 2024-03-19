@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EMI</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#b").click(function () {
+          var p = parseInt($("#tb1").val());
+          var r = parseFloat($("#tb2").val()) / 12;
+          var n = parseInt($("#tb3").val());
+          var emi =
+            (p * r * (Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1))) / 12;
+          $("#h").text("EMI: " + emi.toFixed(2));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <label>Principle Amount: </label><input type="text" id="tb1" />
+      <br />
+      <label>Rate of Interest: </label><input type="text" id="tb2" />
+      <br />
+      <label>Tenure(in months): </label><input type="text" id="tb3" />
+      <br />
+      <button type="button" id="b">Submit</button>
+      <h1 id="h"></h1>
+    </form>
+  </body>
+</html>

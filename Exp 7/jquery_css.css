@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.main{
+    position: relative;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.row1{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.row2{
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    border: none;
+    background: none;
+}
+
+#b1{
+    top: 10px;
+    left: 10px;
+}
+
+#b2{
+    top: 10px;
+    right: 10px;
+}
+
+#b3{
+    bottom: 10px;
+    left: 10px;
+}
+
+#b4{
+    bottom: 10px;
+    right: 10px;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+}
+
+#restart{
+    border-radius: 10px;
+    border: solid;
+    padding: 0;
+    position: relative;
+}

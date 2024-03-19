@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Box</title>
+    <link rel="stylesheet" href="custom_box.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="box_container">
+        <div class="box" id="b1">
+          <h4 id="tb1">Text</h4>
+        </div>
+      </div>
+
+      <div class="property_container">
+        <div class="row">
+          <div class="property">Background Color:</div>
+          <div class="value">
+            <input type="color" id="t1" onchange="change_bg()" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="property">Text Color:</div>
+          <div class="value">
+            <input type="color" id="t2" onchange="change_c()" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="property">Text Size:</div>
+          <div class="value">
+            <input type="number" id="t3" onchange="change_s()" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="property">Box Width:</div>
+          <div class="value">
+            <input type="text" id="t4" onchange="change_w()" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="property">Box Height:</div>
+          <div class="value">
+            <input type="text" id="t5" onchange="change_h()" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="property">Border Radius:</div>
+          <div class="value">
+            <input
+              type="range"
+              min="0"
+              max="125"
+              id="t6"
+              step="1"
+              value="0"
+              onchange="change_br()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="custom_box.js"></script>
+  </body>
+</html>

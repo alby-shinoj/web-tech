@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+}
+
+#i1{
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+#i2{
+    height: 300px;
+    position: absolute;
+    left: 850px;
+    top: 30px
+}
+
+#i3{
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 890px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.game{
+    border: solid;
+    height: 350px;
+    width: 100%;
+    padding: 10px;
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+button{
+    padding: 10px;
+    margin: 20px;
+}

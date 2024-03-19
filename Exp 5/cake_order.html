@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="logo/joecees.png" />
+    <title>Joecees</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Tektur:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/cake_order.css" rel="stylesheet" />
+
+    <script>
+        var rv_count = 0, v_count = 0, bf_count =  0;
+
+        function red_velvet_count(){
+            rv_count++;
+            document.getElementById("red_velvet_count").value = rv_count;
+        }
+
+        function vancho_count(){
+            v_count++;
+            document.getElementById("vancho_count").value = v_count;
+        }
+
+        function black_forest_count(){
+            bf_count++;
+            document.getElementById("black_forest_count").value = bf_count;
+        }
+
+        function bill(){
+            var cost = (rv_count*900) + (v_count*850) + (bf_count*800);
+            document.getElementById("cost").innerHTML = "Total Cost is Rs." + cost;
+        }
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div id="d1">
+        <img src="logo/joecees.png" alt="" id="i1" />
+      </div>
+
+      <div id="d2">
+        <div class="navbar">
+          <ul>
+            <li id="l1">
+              <a href="home.html">Home</a>
+            </li>
+            <li id="l2">
+              <a href="application.html">Application Form</a>
+            </li>
+            <li id="l3">
+              <a href="about_us.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <img src="icons/vertical line(green).png" alt="" id="i3" style="position: relative; left: 20px"/>
+
+        <div class="login">
+          <h4>Sign In</h4>
+          <a href="sign_in.html">
+            <img src="icons/user(green).svg" alt="" id="i2" />
+          </a>
+        </div>
+      </div>
+      <hr
+        style="
+          height: 10px;
+          border-width: 0;
+          color: #009F4D;
+          background-color: #009F4D;
+          width: 100%;
+        "
+      />
+    </div>
+
+    <div class="main">
+      <img src="img/cake.jpg" alt="" id="i4">
+        <div class="box2">
+          <div class="box4">
+            <button type="button" onclick="red_velvet_count()"><img src="img/red velvet.jpg" alt=""></button>
+            <h4>Red Velvet Cost: Rs. 900</h4>
+          </div>
+          <div class="box4">
+            <button type="button" onclick="vancho_count()"><img src="img/vancho.jpg" alt=""></button>
+            <h4>Vancho Cost: Rs. 850</h4>
+          </div>
+          <div class="box4">
+            <button type="button" onclick="black_forest_count()"><img src="img/black forest.jpg" alt=""></button>
+            <h4>Black Forest Cost: Rs. 800</h4>
+          </div>
+        </div>
+
+        <div class="box3">
+            <div class="box5">
+                <h4>Red Velvet</h4>
+                <input type="text" id="red_velvet_count" value="0">
+            </div>
+            <div class="box5">
+                <h4>Vancho</h4>
+                <input type="text" id="vancho_count" value="0">
+            </div>
+            <div class="box5">
+                <h4>Black Forest</h4>
+                <input type="text" id="black_forest_count" value="0">
+            </div>
+        </div>s
+        <input type="submit" id="sub" value="Place Order" onclick="bill()">
+        </form>
+
+        <p id="cost"></p>
+      </div>
+    </div>
+  </body>
+</html>

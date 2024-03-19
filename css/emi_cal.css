@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    background-color: #017CC4;
+    position: fixed;
+    top: 0;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 5px;
+}
+
+.col1{
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.col2{
+    display: flex;
+    flex-direction: row;
+}
+
+.col3{
+    flex: 1 1 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col3 a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col3 a:hover{
+    background-image: linear-gradient(#004b77 50px, white);
+}
+
+.user{
+    flex: 1 0 100px;
+    display: flex;
+    align-items: center; 
+}
+
+.user-icon{
+    flex: 0 0 70px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.user h4{
+    color: white;
+}
+
+fieldset{
+    border: solid 2px;
+    border-color: #b5b5b5;
+    background-color: #EEEFEF;
+    width: 100%;
+}
+
+.row1{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row2{
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.col4{
+    flex: 1 1 50%;
+    display: flex;
+    padding: 10px;
+    padding-right: 30px;
+}
+
+.col4 input{
+    width: 400px;
+    border: solid 1px #b5b5b5;
+    outline: none;
+    font-size: larger;
+    padding: 5px;
+}
+
+.col4 input:focus{
+    border: solid 2px  #b5b5b5;
+}
+
+.icon{
+    min-width: 50px;
+    text-align: center;
+    background-color: #b5b5b5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row3{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.col5{
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.row4{
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row5{
+    flex: 1 1 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row5 h4{
+    color: #6d6d6d;
+}

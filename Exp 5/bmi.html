@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <form action="">
+        <h4>Weight(Kg)</h4>
+        <input type="text" value="0" id="t1" />
+
+        <h4>Height(metres)</h4>
+        <input type="text" value="0" id="t2" />
+
+        <br />
+        <button type="button" onclick="bmi()">Submit</button>
+
+        <h4>BMI</h4>
+        <h3 id="bmi"></h3>
+      </form>
+    </fieldset>
+
+    <script>
+      let w, h, bmi;
+
+      function read(id) {
+        return document.getElementById(id).value;
+      }
+
+      function bmi() {
+        w = parseFloat(read("t1"));
+        h = parseFloat(read("t2"));
+
+        bmi = w / (h * h);
+
+        document.getElementById("bmi").innerHTML = bmi;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <form>
+        <h4>Loan Amount(Rs)</h4>
+        <input type="text" value="0" id="t1" />
+
+        <h4>Annual Interest Rate(%)</h4>
+        <input type="text" value="0" id="t2" />
+
+        <h4>Tenure</h4>
+        <input type="text" value="0" id="t3" onkeyup="emi_c()" />
+
+        <br />
+        <button type="button" onclick="emi_c()">Submit</button>
+
+        <h4>Loan EMI</h4>
+        <h3>Rs. 0</h3>
+
+        <h4>Total Interest Payable</h4>
+        <h3 id="interest">Rs. 0</h3>
+
+        <h4>Total Repayment</h4>
+        <h3>Rs. 0</h3>
+      </form>
+    </fieldset>
+
+    <script>
+      let amt, rate, tenure;
+
+      function read(id) {
+        var hre;
+        return document.getElementById(id).value;
+      }
+
+      function emi_c() {
+        amt = parseInt(read("t1"));
+        rate = read("t2") / 12 / 100;
+        tenure = read("t3") * 12;
+
+        var emi = parseInt(
+          (amt * rate * (1 + rate) * tenure) / ((1 + rate) * tenure - 1)
+        );
+        document.getElementById("emi").innerHTML = "Rs. " + emi;
+
+        var interest = parseInt(amt * rate * (tenure / 12));
+        document.getElementById("interest").innerHTML = "Rs. " + interest;
+
+        var total = amt + interest;
+        document.getElementById("total").innerHTML = "Rs. " + total;
+      }
+    </script>
+  </body>
+</html>

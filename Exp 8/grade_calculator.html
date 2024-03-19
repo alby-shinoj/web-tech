@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="grade_calculator.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(".foot").hide();
+      var app = angular.module("app1", []);
+      app.controller("control", function ($scope) {
+        $scope.grade = function () {
+          var name = $scope.n1;
+          var reg = $scope.n2;
+          var m1 = parseInt($scope.n3);
+          var m2 = parseInt($scope.n4);
+          var m3 = parseInt($scope.n5);
+          var avg = (m1 + m2 + m3) / 3;
+          var grade = null;
+          if (avg > 95) grade = "S";
+          else if (avg > 85) grade = "A";
+          else if (avg > 75) grade = "B";
+          else if (avg > 65) grade = "C";
+          else if (avg >= 50) grade = "P";
+          else grade = "F";
+
+          $(".foot").slideDown();
+          $scope.view = name + ": Grade " + grade;
+        };
+      });
+
+      // Sticky-Top
+      document.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".nav");
+        const navbarHeight = 100;
+        const distanceFromTop = Math.abs(
+          document.body.getBoundingClientRect().top
+        );
+        if (distanceFromTop >= navbarHeight) navbar.classList.add("fixed-top");
+        else navbar.classList.remove("fixed-top");
+      });
+    </script>
+  </head>
+
+  <body ng-app="app1" ng-controller="control">
+    <div class="head">
+      <div class="row1">
+        <img src="../logo/logo.png" style="object-fit: cover; height: 100%" />
+      </div>
+
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#" class="active">Students</a>
+        <a href="#">Account</a>
+      </div>
+    </div>
+
+    <div class="main">
+      <h3>Grade Calculator</h3>
+      <br /><br /><br />
+      <form>
+        <div class="property_container">
+          <div class="row">
+            <div class="property">Student Name:</div>
+            <div class="value">
+              <input type="text" ng-model="n1" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="property">Student RegNo:</div>
+            <div class="value">
+              <input type="text" ng-model="n2" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="property">Web Technology Marks:</div>
+            <div class="value">
+              <input type="text" ng-model="n3" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="property">Introduction to Data Science:</div>
+            <div class="value">
+              <input type="text" ng-model="n4" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="property">Database Management Systems:</div>
+            <div class="value">
+              <input type="text" ng-model="n5" />
+            </div>
+          </div>
+        </div>
+      </form>
+      <br /><button type="button" ng-click="grade()">Find Grade</button>
+      <div class="foot" ng-bind="view"></div>
+    </div>
+    <br /><br /><br /><br /><br /><br />
+  </body>
+</html>

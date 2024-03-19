@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SI</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#b").click(function () {
+          var p = parseInt($("#tb1").val());
+          $("#tb2").val(10);
+          var n = parseInt($("#tb3").val());
+          var si = p * r * n;
+          $("#h").html(
+            "<b>Simple Interest: </b>" +
+              si.toFixed(2) +
+              "\nTotal Payable: " +
+              (si + p)
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <label>Principle Amount: </label><input type="text" id="tb1" />
+      <br />
+      <label>Rate of Interest: </label><input type="text" id="tb2" />
+      <br />
+      <label>Tenure(in years): </label><input type="text" id="tb3" />
+      <br />
+      <button type="button" id="b">Submit</button>
+      <p id="h"></p>
+    </form>
+  </body>
+</html>

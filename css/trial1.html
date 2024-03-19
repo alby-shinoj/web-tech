@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .main > input {
+        width: 100px;
+        height: 30px;
+        margin-right: 20px;
+      }
+
+      #btn {
+        background-color: blue;
+        color: white;
+      }
+
+      .c4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h4 {
+        margin: 50px;
+        padding: 30px;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app = angular.module("app", []);
+      app.controller("control", function ($scope) {
+        $scope.cal = function () {
+          $scope.budget = parseInt($scope.tb1);
+
+          $scope.val1 = parseInt($scope.tb2);
+          $scope.val2 = parseInt($scope.tb3);
+          $scope.val3 = parseInt($scope.tb4);
+          $scope.val4 = parseInt($scope.tb5);
+
+          $scope.res1 = "Room Rent: " + ($scope.val1 / 100) * $scope.budget;
+          $scope.res2 = "Accessories: " + ($scope.val2 / 100) * $scope.budget;
+          $scope.res3 = "Emergency: " + ($scope.val3 / 100) * $scope.budget;
+          $scope.res4 = "Saving: " + ($scope.val4 / 100) * $scope.budget;
+        };
+      });
+    </script>
+  </head>
+  <body ng-app="app" ng-controller="control">
+    <center>
+      <div style="background-color: black; color: white">
+        <h1>BUDGET CALCULATOR</h1>
+      </div>
+      <div>
+        <h3>Enter the amount you want to manage</h3>
+        <input type="text" ng-model="tb1" />
+        <h3>how would u like to divide</h3>
+        <div
+          class="main"
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <h3>Room rent</h3>
+          <input type="text" ng-model="tb2" />
+          <h3>Accessories</h3>
+          <input type="text" ng-model="tb3" />
+          <h3>emergency</h3>
+          <input type="text" ng-model="tb4" />
+          <h3>saving</h3>
+          <input type="text" ng-model="tb5" />
+        </div>
+
+        <button id="btn" type="button" ng-click="cal()">Evaluate money</button>
+      </div>
+      <div class="c4">
+        <h4 style="background-color: blue" ng-bind="res1"></h4>
+        <h4 style="background-color: green" ng-bind="res2"></h4>
+        <h4 style="background-color: blue" ng-bind="res3"></h4>
+        <h4 style="background-color: pink" ng-bind="res4"></h4>
+      </div>
+    </center>
+  </body>
+</html>

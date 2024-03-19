@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="jquery_css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Treasure Hunt</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const clear = setTimeout(h, 2000);
+        var s = 0;
+        var id = null;
+        function h() {
+          $(".h").slideUp();
+          id = setInterval(score, 10);
+        }
+
+        function score() {
+          if (s == 4) {
+            clearInterval(id);
+            $("#restart").show();
+            $("#i5").show();
+            $("#i5").animate({ left: "900px" }, "slow");
+            $(".heading").text("Score: " + s);
+            $(".heading").slideDown();
+          }
+        }
+
+        $("#b1").mouseover(function () {
+          $("#i1").show();
+        });
+
+        $("#b1").click(function () {
+          s++;
+          $(this).hide();
+        });
+
+        $("#b2").mouseover(function () {
+          $("#i2").toggle();
+        });
+
+        $("#b2").mouseout(function () {
+          $("#i2").toggle();
+        });
+
+        $("#b2").click(function () {
+          s++;
+          $(this).hide();
+        });
+
+        $("#b3").mouseover(function () {
+          $("#i3").fadeIn();
+        });
+
+        $("#b3").mouseout(function () {
+          $("#i3").fadeOut();
+        });
+
+        $("#b3").click(function () {
+          s++;
+          $(this).hide();
+        });
+
+        $("#b4").mouseover(function () {
+          $("#i4").fadeToggle();
+        });
+
+        $("#b4").mouseout(function () {
+          $("#i4").fadeToggle();
+        });
+
+        $("#b4").click(function () {
+          s++;
+          $(this).hide();
+        });
+
+        $("#restart").mouseover(function () {
+          $(this).css("background-color", "red");
+          $(this).css("color", "white");
+        });
+
+        $("#restart").mouseout(function () {
+          $(this).css("background-color", "white");
+          $(this).css("color", "black");
+        });
+
+        $("#restart").click(function () {
+          location.reload();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="row1">
+        <h3 class="h">There are hidden treasures find it.</h3>
+        <h4 class="heading" style="display: none"></h4>
+        <button id="restart" style="display: none"><h4>Restart</h4></button>
+        <button id="b1">
+          <img src="treasure.png" id="i1" style="display: none" />
+        </button>
+        <button id="b2">
+          <img src="treasure.png" id="i2" style="display: none" />
+        </button>
+        <button id="b3">
+          <img src="treasure.png" id="i3" style="display: none" />
+        </button>
+        <button id="b4">
+          <img src="treasure.png" id="i4" style="display: none" />
+        </button>
+      </div>
+
+      <div class="row2">
+        <img
+          src="celebration.png"
+          id="i5"
+          style="width: 300px; display: none; position: relative"
+        />
+      </div>
+    </div>
+  </body>
+</html>
